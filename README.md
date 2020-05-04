@@ -1,4 +1,4 @@
-# django_getting_started
+# django-fundamentals
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 ![course-project](https://img.shields.io/badge/Project-Course-orange.svg)
 
@@ -14,6 +14,7 @@ Exercise of the Pluralsight course: Django Fundamentals by Reindert-Jan Ekker
 <a href="https://code.visualstudio.com/"><img src="https://raw.githubusercontent.com/BorjaG90/media/master/img/logos/vscode.png" width=50 alt="VSCode"></a>
 
 
+# django_getting_started
     django-admin startproject meetingplanner
 
 #####   To link & create html to core project where views are linked in urls of coreproject
@@ -53,3 +54,4 @@ To use the inbuilt admin panel, we required to create one super user.
 
 ##### To create super user
     python manage.py createsuperuser
+
