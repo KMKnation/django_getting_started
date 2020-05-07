@@ -57,4 +57,4 @@ To use the inbuilt admin panel, we required to create one super user.
 
 
 ##### Flow of django MTV (Model, Template, View) [MVC] pattern
-<img src="./screenshots/flow.png" alt="Original" width="400" height="500" align="middle"/>
+<img src="./screenshots/flow.png" alt="Original"  align="middle"/>
