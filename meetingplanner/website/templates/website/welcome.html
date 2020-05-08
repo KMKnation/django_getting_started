@@ -8,5 +8,12 @@
 <h2>Welcome to the Meeting Planner</h2>
 <p> This is <em>Mayur Kanojiya</em> trying out django getting started course from <em>pluralsight.com</em></p>
 <p>There are {{meetings_count}} meetings(s).</p>
+<ul>
+    {% for meeting in meetings %}
+    <li>
+        <a href="/meetings/{{meeting.id}}">{{meeting.title}}</a>
+    </li>
+    {% endfor %}
+</ul>
 </body>
 </html>
