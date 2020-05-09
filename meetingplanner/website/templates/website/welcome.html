@@ -1,12 +1,7 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome</title>
-    <link rel="stylesheet" href="{% static 'website/style.css' %}"/>
-</head>
-<body>
+{% block title %}HOME{% endblock %}
+{% block content %}
 <center><img src="{% static 'website/logo.png' %}" width="100px"></center>
 <h2>Welcome to the Meeting Planner</h2>
 <p> This is <em>Mayur Kanojiya</em> trying out django getting started course from <em>pluralsight.com</em></p>
@@ -20,5 +15,4 @@
 </ul>
 
 <a href="{% url 'room' %}">Availlable Rooms</a>
-</body>
-</html>
+{% endblock %}
