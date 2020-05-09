@@ -58,3 +58,39 @@ To use the inbuilt admin panel, we required to create one super user.
 
 ##### Flow of django MTV (Model, Template, View) [MVC] pattern
 <img src="./screenshots/flow.png" alt="Original"  align="middle"/>
+
+
+#### Template supports inline code like JSTL
+To show any value from context or dictionary, We need to use.
+
+    {{object.value}}
+
+To iterate through list of object, there is support of forloop also, but it is inside the code block like below.
+
+    {% for item in items %}
+    -----
+    {% endfor %}
+
+##### URL Mapping
+To create url mapping of each html pages dynamically, We have to provied <b>name</b> attribute to 
+url's path method in urls.py like below.
+
+        path('<int:id>', detail, name='detail'),
+
+Now if we need to call the detail page from any html templat, We just need to call
+
+       <a href="{% url 'detail' meeting.id %}">{{meeting.title}}</a>
+    
+which bind the detail view page and also overloading the meeting.id param to <int:id>.
+
+Still applying url binding in main general project's urls.py is so much repetitive task so django provides
+a solution to this by seprating module's urls in module's urs.py and including this urls in general urls.py like below.
+
+    from django.urls import path, include
+    path('meetings/', include('meetings.urls'))
+
+where meetings.urls targetting the urls.py file of meeting module.
+
+
+##### Applying Template Inheritance and providing static content.
+ 
