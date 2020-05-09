@@ -1,0 +1,11 @@
+body{
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans;
+font-weight: 400;
+font-size: 40px;
+line-height: 1.7;
+letter-spacing: normal;
+webkit-font-smoothing: antialiased;
+margin-left: 20px;
+color: rgb(0, 0, 0);
+text-decoration: none;
+}

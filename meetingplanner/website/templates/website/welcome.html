@@ -1,10 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
+    <link rel="stylesheet" href="{% static 'website/style.css' %}"/>
 </head>
 <body>
+<center><img src="{% static 'website/logo.png' %}" width="100px"></center>
 <h2>Welcome to the Meeting Planner</h2>
 <p> This is <em>Mayur Kanojiya</em> trying out django getting started course from <em>pluralsight.com</em></p>
 <p>There are {{meetings_count}} meetings(s).</p>
