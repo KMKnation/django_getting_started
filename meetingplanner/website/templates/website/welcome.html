@@ -14,5 +14,10 @@
     {% endfor %}
 </ul>
 
-<a href="{% url 'room' %}">Availlable Rooms</a>
+<div>
+    <a href="{% url 'room' %}">Availlable Rooms</a>
+</div>
+<div>
+    <a href="{% url 'create_meeting' %}">Create Meeting</a>
+</div>
 {% endblock %}

@@ -1,5 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from meetings.models import Meeting, Room
+from django.forms import modelform_factory
+
+MeetingForm = modelform_factory(Meeting, exclude=[])
 
 
 # Create your views here.
@@ -16,3 +19,9 @@ def list_of_room(request):
                   'meetings/rooms.html',
                   {'total': Room.objects.count(),
                    'rooms': Room.objects.all()})
+
+
+def create(request):
+    return render(request,
+                  'meetings/new.html',
+                  context={'form': MeetingForm})
