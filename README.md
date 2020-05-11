@@ -13,7 +13,8 @@ Exercise of the Pluralsight course: Django Fundamentals by Reindert-Jan Ekker
 <a href="https://getbootstrap.com/"><img src="https://raw.githubusercontent.com/BorjaG90/media/master/img/logos/bootstrap.png" width=50 alt="Bootstrap"></a>
 <a href="https://code.visualstudio.com/"><img src="https://raw.githubusercontent.com/BorjaG90/media/master/img/logos/vscode.png" width=50 alt="VSCode"></a>
 
-<video src="./screenshots/meetingplanner.mp4"/>
+<img src="./screenshots/meetingplanner.gif" alt="Original"  align="middle"/>
+
 
 # django_getting_started
     django-admin startproject meetingplanner
