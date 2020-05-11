@@ -93,4 +93,20 @@ where meetings.urls targetting the urls.py file of meeting module.
 
 
 ##### Applying Template Inheritance and providing static content.
- 
+To apply template inheritance concept, We need to create one base html under the templates directory.
+This base.html contains the command layout using following code.
+
+    {% block content %} {% endblock %] 
+
+Above lines are just declaration like where the all content of page goes according to base,html.
+After above declation, We have to specify following code to all html files to make the template common and standard.
+
+    {% extends 'base.html' %} #first line
+    {% load static %} #Mandatory line to load static content with following code
+    {% static 'module/style.css' %}
+
+The above extend line is required to inherit template design.
+then we have to place our body code under 
+    
+    {% block conten %} ...body... {% endblock %}
+    
