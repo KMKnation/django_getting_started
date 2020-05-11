@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{meeting.title}}</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %} {{meeting.title}} {% endblock %}
+{% block content %}
 <p>This meeting is scheduled on {{meeting.date}} at {{meeting.start_time}} on {{meeting.room}} </p>
 <p>The duration of meeting is : {{meeting.duration}} hour(s)</p>
 <a href="{% url 'welcome' %}">HOME</a>
-</body>
-</html>
+{% endblock %}
