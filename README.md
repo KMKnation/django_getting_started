@@ -71,7 +71,7 @@ To iterate through list of object, there is support of forloop also, but it is i
     -----
     {% endfor %}
 
-##### URL Mapping
+#### URL Mapping
 To create url mapping of each html pages dynamically, We have to provied <b>name</b> attribute to 
 url's path method in urls.py like below.
 
@@ -92,7 +92,7 @@ a solution to this by seprating module's urls in module's urs.py and including t
 where meetings.urls targetting the urls.py file of meeting module.
 
 
-##### Applying Template Inheritance and providing static content.
+#### Applying Template Inheritance and providing static content.
 To apply template inheritance concept, We need to create one base html under the templates directory.
 This base.html contains the command layout using following code.
 
@@ -109,4 +109,15 @@ The above extend line is required to inherit template design.
 then we have to place our body code under 
     
     {% block conten %} ...body... {% endblock %}
+    
+#### Creating form with modelform_factory of django.forms
+Its easy, We just need to create class of our model from modelform_factory and pass it to the context.
+
+    from django.forms import modelform_factory
+    MeetingForm = modelform_factory(Meeting, exclude=[])
+    
+    def create(request):
+        return render(request,
+                      'meetings/new.html',
+                      context={'form': MeetingForm})
     
