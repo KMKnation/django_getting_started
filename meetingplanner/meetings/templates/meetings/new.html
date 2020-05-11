@@ -3,11 +3,12 @@
 {% block content%}
 <h2>Create Meeting</h2>
 
-<form>
+<form method="post">
     <table>
         {{form}}
     </table>
+    {% csrf_token %}
+    <button>submit</button>
 </form>
 
-<button>Submit</button>
 {% endblock %}
